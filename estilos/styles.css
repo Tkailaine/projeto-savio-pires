@@ -316,6 +316,11 @@
   display: none;
 }
 
+.visivel{
+  
+}
+
+
 .area-principal{
   display: flex;
   flex-direction: column;
@@ -330,7 +335,7 @@
 }
 
 .btn-contato{
-  display: block;
+ 
   border: none;
   width: 200px;
   height: 50px;

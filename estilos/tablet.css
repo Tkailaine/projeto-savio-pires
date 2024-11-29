@@ -18,6 +18,10 @@
 
   }
 
+.visivel{
+  display: none;
+}
+
 .areas{
     gap: 50px;
 

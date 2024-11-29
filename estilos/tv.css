@@ -17,7 +17,9 @@
     height: 600px;
 }
 
-
+.visivel{
+    display: none;
+  }
 .areas{
     gap: 150px;
 
