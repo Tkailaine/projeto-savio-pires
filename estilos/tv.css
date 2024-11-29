@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+.bandeira{
+    flex-direction: row;
+}
+.ft-bandeira{
+    width: 50%;
+}
+
+.ft-bandeira h1{
+    left: 40%;
+    width: 60%;
+  }
+
+.slider-noticias{
+    width: 50%;
+    height: 600px;
+}
+
+
+.areas{
+    gap: 150px;
+
+  }
+
+  
+.oculto{
+    display: block;
+    }
+
+.area-principal{
+
+    flex-direction: row;
+    
+}
+.ft-atuacao{
+    height: 700px;
+    
+    }       
+
+.sobre{
+    flex-direction: row;
+    }
+
+.sobre-escritorio{
+width: 50%;
+}
+
+.txt-escritorio{
+width: 50%;
+}

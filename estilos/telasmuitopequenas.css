@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+.logo img{
+    width: 200px;
+}
+.ft-bandeira h1{
+font-size: 1.3em;
+}
+
+.iarea{
+margin: auto;
+width: 30px;
+height: 30px;
+}
+
+.chamada-acao{
+padding: 0px 20px 20px 20px;
+}
+
+.btn-endereco{
+
+width: 300px;
+height: 45px;}
