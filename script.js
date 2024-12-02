@@ -130,3 +130,122 @@ unicoDots.forEach((dot, index) => {
         autoSlideInterval = setInterval(autoSlide, 3000); // Reinicia o loop automático
     });
 });
+
+
+
+
+
+
+const news = [
+  {
+    title: "Reforma Tributária é Aprovada",
+    author: "João Silva",
+    date: "2024-11-28",
+    summary: "A reforma tributária foi aprovada e traz mudanças significativas.",
+    content: "A reforma tributária foi aprovada ontem no Senado. Com mudanças importantes, ela impactará os cidadãos, empresas e servidores públicos em várias áreas.",
+    image: "images/reforma-tributaria.jpg",
+  },
+  {
+    title: "Mudanças na Previdência",
+    author: "Ana Clara",
+    date: "2024-11-25",
+    summary: "O governo anunciou novas regras para aposentadorias.",
+    content: "O governo federal divulgou novas alterações nas regras previdenciárias, que visam maior equilíbrio financeiro e social no sistema de aposentadoria.",
+    image: "images/previdencia.jpg",
+  },
+  {
+    title: "Novas Leis Trabalhistas",
+    author: "Carlos Souza",
+    date: "2024-11-20",
+    summary: "Novas leis trabalhistas entram em vigor nesta semana.",
+    content: "As novas leis trabalhistas, aprovadas no mês passado, já estão em vigor e incluem alterações importantes para contratos de trabalho e direitos dos empregados.",
+    image: "images/leis-trabalhistas.jpg",
+  },
+  {
+    title: "Decisão Histórica do STF",
+    author: "Mariana Almeida",
+    date: "2024-11-15",
+    summary: "O STF tomou uma decisão importante em relação aos direitos sociais.",
+    content: "O Supremo Tribunal Federal decidiu em favor dos trabalhadores em um caso histórico que redefine as políticas de benefícios sociais no Brasil.",
+    image: "images/stf-decisao.jpg",
+  },
+];
+
+let currentPage = 0;
+const itemsPerPage = 3;
+
+function renderNews() {
+  const container = document.querySelector(".blog-container");
+  const pagination = document.querySelector(".blog-pagination");
+
+  // Ordena as notícias por data (mais recentes primeiro)
+  const sortedNews = news.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+  // Define o intervalo de notícias para exibir na página atual
+  const start = currentPage * itemsPerPage;
+  const end = start + itemsPerPage;
+  const newsToDisplay = sortedNews.slice(start, end);
+
+  // Renderiza as notícias
+  container.innerHTML = "";
+  newsToDisplay.forEach((item, index) => {
+    const newsItem = document.createElement("div");
+    newsItem.className = "blog-item";
+    newsItem.innerHTML = `
+      <img src="${item.image}" alt="${item.title}">
+      <h3>${item.title}</h3>
+      <p><strong>Autor:</strong> ${item.author}</p>
+      <p><strong>Data:</strong> ${new Date(item.date).toLocaleDateString()}</p>
+      <p>${item.summary}</p>
+      <button onclick="showFullNews(${start + index})">Ler mais</button>
+    `;
+    container.appendChild(newsItem);
+  });
+
+  // Renderiza os botões de paginação
+  pagination.innerHTML = "";
+  const totalPages = Math.ceil(news.length / itemsPerPage);
+  for (let i = 0; i < totalPages; i++) {
+    const button = document.createElement("button");
+    button.innerText = i + 1;
+    button.onclick = () => {
+      currentPage = i;
+      renderNews();
+    };
+    if (i === currentPage) {
+      button.style.backgroundColor = "#0056b3";
+    }
+    pagination.appendChild(button);
+  }
+}
+
+// Exibe a notícia completa no modal
+function showFullNews(index) {
+  const modal = document.getElementById("newsModal");
+  const title = document.getElementById("modal-title");
+  const authorDate = document.getElementById("modal-author-date");
+  const fullContent = document.getElementById("modal-full-content");
+  const image = document.getElementById("modal-image");
+
+  const selectedNews = news[index];
+  title.innerText = selectedNews.title;
+  authorDate.innerText = `Por ${selectedNews.author} em ${new Date(selectedNews.date).toLocaleDateString()}`;
+  fullContent.innerText = selectedNews.content;
+  image.src = selectedNews.image;
+
+  modal.style.display = "flex";
+}
+
+// Fecha o modal
+document.querySelector(".close-modal").onclick = () => {
+  document.getElementById("newsModal").style.display = "none";
+};
+
+// Inicializa o mini-blog
+renderNews();
+
+
+
+
+
+

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
+<head >
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sávio Pires Advocacia e Consultoria Jurídica</title>
@@ -14,90 +14,104 @@
 <body>
   <header class="navbar">
     <div class="container">
-      <div class="logo"><img src="imagens/logo.png" alt="Luís felipe sávio pires advocacia e consultoria jurídica "></div>
+      <a href="#home">
+        <div class="logo"><img src="imagens/logo.png" alt="Luís felipe sávio pires advocacia e consultoria jurídica "></div>
+      </a>
       <button class="menu-toggle" id="menuToggle">
         <span></span>
         <span></span>
         <span></span>
       </button>
+      
       <nav class="menu" id="menu">
         <ul>
           <li><a href="#home">Home</a></li>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#servicos">Serviços</a></li>
-          <li><a href="#contato">Contato</a></li>
+          <li><a href="#areas-atuacao">Áreas de Atuação</a></li>
+          <li><a href="#escritorio">Escritório</a></li>
+          <li><a href="#cv-advogado">Sobre</a></li>
+          <li><a href="#mini-blog">Notícias</a></li>
+         
         </ul>
         <button class="close-btn" id="closeMenu">&times;</button>
       </nav>
+      <a href="https://wa.link/trdfq7" target="_blank"><button class="btn-whatsapp">Nos contate</button></a>
     </div>
   </header>
   <main>
-    <section class="bandeira">
+    <section class="bandeira" id="home">
         <div class="ft-bandeira">
             <h1>Cuidando de seu futuro com responsabilidade e expertise.</h1>
         </div>
         <div class="slider-noticias">
             <div class="news-slider">
-                <div class="slider-container">
-                  <div class="slider-item">
-                    <h3 class="news-title">Notícia 1: Título da Notícia</h3>
-                    <p class="news-date">26 de Novembro de 2024</p>
-                    <p class="news-author">Por João Silva</p>
-                    <p class="news-summary">Este é um resumo da primeira notícia, explicando rapidamente o conteúdo principal do texto...</p>
+                <a href="#mini-blog" target="_self" style="color: rgb(63, 63, 63);">
+                  <div class="slider-container">
+                    <div class="slider-item">
+                      <h3 class="news-title">Notícia 1: Título da Notícia</h3>
+                      <p class="news-date">26 de Novembro de 2024</p>
+                      <p class="news-author">Por João Silva</p>
+                      <p class="news-summary">Este é um resumo da primeira notícia, explicando rapidamente o conteúdo principal do texto...</p>
+                    </div>
+                    <div class="slider-item">
+                      <h3 class="news-title">Notícia 2: Título da Notícia</h3>
+                      <p class="news-date">25 de Novembro de 2024</p>
+                      <p class="news-author">Por Maria Oliveira</p>
+                      <p class="news-summary">Resumo da segunda notícia, explicando rapidamente sobre o que se trata a atualização...</p>
+                    </div>
+                    <div class="slider-item">
+                      <h3 class="news-title">Notícia 3: Título da Notícia</h3>
+                      <p class="news-date">24 de Novembro de 2024</p>
+                      <p class="news-author">Por Pedro Almeida</p>
+                      <p class="news-summary">Este é o resumo da terceira notícia, fornecendo uma visão rápida do conteúdo central...</p>
+                    </div>
+                    <div class="slider-item">
+                      <h3 class="news-title">Notícia 4: Título da Notícia</h3>
+                      <p class="news-date">23 de Novembro de 2024</p>
+                      <p class="news-author">Por Ana Souza</p>
+                      <p class="news-summary">Este é um resumo da quarta notícia, abordando as atualizações mais recentes...</p>
+                    </div>
                   </div>
-              
-                  <div class="slider-item">
-                    <h3 class="news-title">Notícia 2: Título da Notícia</h3>
-                    <p class="news-date">25 de Novembro de 2024</p>
-                    <p class="news-author">Por Maria Oliveira</p>
-                    <p class="news-summary">Resumo da segunda notícia, explicando rapidamente sobre o que se trata a atualização...</p>
+                  <!-- Indicadores (pontos) -->
+                  <div class="dots-container">
+                    <span class="dot" onclick="moveSlideTo(0)"></span>
+                    <span class="dot" onclick="moveSlideTo(1)"></span>
+                    <span class="dot" onclick="moveSlideTo(2)"></span>
+                    <span class="dot" onclick="moveSlideTo(3)"></span>
                   </div>
-              
-                  <div class="slider-item">
-                    <h3 class="news-title">Notícia 3: Título da Notícia</h3>
-                    <p class="news-date">24 de Novembro de 2024</p>
-                    <p class="news-author">Por Pedro Almeida</p>
-                    <p class="news-summary">Este é o resumo da terceira notícia, fornecendo uma visão rápida do conteúdo central...</p>
                   </div>
-              
-                  <div class="slider-item">
-                    <h3 class="news-title">Notícia 4: Título da Notícia</h3>
-                    <p class="news-date">23 de Novembro de 2024</p>
-                    <p class="news-author">Por Ana Souza</p>
-                    <p class="news-summary">Este é um resumo da quarta notícia, abordando as atualizações mais recentes...</p>
-                  </div>
-                </div>
-              
-                <!-- Indicadores (pontos) -->
-                <div class="dots-container">
-                  <span class="dot" onclick="moveSlideTo(0)"></span>
-                  <span class="dot" onclick="moveSlideTo(1)"></span>
-                  <span class="dot" onclick="moveSlideTo(2)"></span>
-                  <span class="dot" onclick="moveSlideTo(3)"></span>
-                </div>
-              </div>
+                </a>
         </div>
     </section>
     <section class="atuacao">
         <div class="areas">
           <div class="conteudo">
-            <div class="iarea publico"></div>
+            <a href="#areas-atuacao" target="_self">
+              <div class="iarea publico"></div>
+            </a>
             <h1>Direito Público</h1>
           </div>
           <div class="conteudo">
-            <div class="iarea civil"></div>
+            <a href="#areas-atuacao" target="_self">
+              <div class="iarea civil" ></div>
+            </a>
             <h1>Direito Civil</h1>
           </div>
           <div class="conteudo">
-            <div class="iarea trabalhista"></div>
+            <a href="#areas-atuacao" target="_self">
+              <div class="iarea trabalhista" ></div>
+            </a>
             <h1>Direito Trabalhista</h1>
           </div>
           <div class="conteudo oculto">
-            <div class="iarea previdenciario"></div>
+            <a href="#areas-atuacao" target="_self">
+              <div class="iarea previdenciario" ></div>
+            </a>
             <h1>Direito Previdenciário</h1>
           </div>
           <div class="conteudo oculto">
-            <div class="iarea consumidor"></div>
+            <a href="#areas-atuacao" target="_self">
+              <div class="iarea consumidor"></div>
+            </a>
             <h1>Direito do Consumidor</h1>
           </div>
         </div>
@@ -106,9 +120,9 @@
         <div class="area-principal">
           <div class="imagem-destaque">
             <div class="ft-atuacao"></div>
-            <button class="btn-contato oculto">Nos contate →</button>
+            <a href="https://wa.link/trdfq7" target="_self"><button class="btn-contato oculto">Nos contate →</button></a>
           </div> 
-          <button class="btn-contato visivel">Nos contate →</button>
+          <a href="https://wa.link/trdfq7" target="_self"><button class="btn-contato visivel">Nos contate →</button></a>
           <div class="txt-atuacao">
             <h1 class="titulo-direito">Direito Público</h1>
             <ul>
@@ -150,9 +164,9 @@
             </ul>
           </div>
         </div>
-        <div class="outras-areas">
+        <div class="outras-areas" id="areas-atuacao">
           <h1>ÁREAS DE ATUAÇÃO</h1>
-          <section class="areas-atuacao">
+          <section class="areas-atuacao" >
             
             <div class="area-card" id="area1">
               <h3>Direito Público</h3>
@@ -227,10 +241,10 @@
             </div>
           </section>
 
-          <button class="btn-chamada">Nos Contate →</button>
+          <a href="https://wa.link/trdfq7" target="_blank"><button class="btn-chamada">Nos Contate →</button></a>
     </section>
 
-    <section class="sobre">
+    <section class="sobre" id="escritorio">
       <div class="sobre-escritorio">
         <div class="unico-slider-wrapper">
           <div class="unico-slider">
@@ -264,7 +278,7 @@
         <div class="conteudo-escritorio">
           <h1>Nosso escritório</h1>
           <p>Nosso escritório passou por uma reforma recente e cuidadosa, com o objetivo de oferecer ainda mais conforto e sofisticação aos nossos clientes. Pensado para garantir um ambiente acolhedor e funcional, cada detalhe foi projetado para proporcionar uma experiência única, refletindo a seriedade e o compromisso com a excelência que nos define. Venha nos visitar e conhecer o novo espaço que combina modernidade e tradição</p>
-          <button class="btn-endereco">Nos Visite →</button>
+          <a href="https://maps.app.goo.gl/aPFwJcWkMxiTDexk6" target="_blank"><button class="btn-endereco">Nos Visite →</button></a>
         </div>
       </div>
       
@@ -272,7 +286,54 @@
     </section>
 
    
-    <section class="blog"></section>
+    <section class="cv-advogado" id="cv-advogado">
+      <div class="lawyer-container">
+        <div class="lawyer-photo">
+          <img src="imagens/savio-pires.jpg" alt="Foto do Advogado">
+        </div>
+        <div class="lawyer-details">
+          <h2>Dr. Luís Felipe Sávio Pires</h2>
+          <p class="lawyer-experience">
+            <ul>
+              <li><strong>Experiência Profissional:</strong> 28 anos de experiência na advocacia, com um amplo conhecimento nas diversas áreas do direito.</li>
+
+              <li><strong>Formação Acadêmica:</strong> Graduado pela Fundação Eurípides Soares da Rocha, com uma sólida formação jurídica.</li>
+              
+              <li><strong>Experiência Administrativa:</strong> Atuou como Secretário Jurídico do Município de Apiaí entre 2013 e 2016, adquirindo vasto conhecimento em administração pública.</li>
+            </ul>
+            
+            <p class="citacao"><q>A justiça não é a conveniência do mais forte, mas sim a virtude e sabedoria que favorece os mais fracos.</q> — Sócrates</p>
+
+          </p>
+          <a href="https://wa.link/trdfq7" target="_blank"><button class="contact-button">Nos Contate</button></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="mini-blog" id="mini-blog">
+      <h2>Últimas Notícias</h2>
+      <div class="blog-container">
+        <!-- Container onde as notícias serão exibidas -->
+      </div>
+      
+      <!-- Navegação por índice -->
+      <div class="blog-pagination">
+        <!-- Índices serão gerados dinamicamente via JavaScript -->
+      </div> 
+    </section>
+    
+    <!-- Modal para exibir notícia completa -->
+    <div class="news-modal" id="newsModal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h3 id="modal-title"></h3>
+        <p id="modal-author-date"></p>
+        <img id="modal-image" alt="Imagem da notícia" style="width: 100%; margin: 10px 0; border-radius: 5px;">
+        <p id="modal-full-content"></p>
+      </div>
+    </div>
+    
+    
   </main>
   <script src="script.js"></script>
 </body>

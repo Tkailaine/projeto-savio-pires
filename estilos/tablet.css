@@ -1,5 +1,10 @@
 @charset "UTF-8";
-
+.logo img{
+  width: 160px;
+}
+nav.menu ul {
+  gap: 20px;
+}
 .bandeira{
     flex-direction: row;
 }

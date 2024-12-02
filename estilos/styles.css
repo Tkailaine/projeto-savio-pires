@@ -25,6 +25,13 @@
     scroll-behavior: smooth;
   }
 
+  a{
+    text-decoration: none;
+   
+  }
+
+ 
+
   h1{
     font-family: var(--fonte-destaque)
   }
@@ -49,7 +56,7 @@
   }
   
   .logo img{
-    width: 250px;
+    width: 200px;
   }
   nav.menu .close-btn {
     display: block;
@@ -61,7 +68,7 @@
   nav.menu ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 50px;
   }
   
   nav.menu ul li a {
@@ -197,6 +204,25 @@
       opacity: 1;
       transform: translateY(0);
     }
+  }
+
+  .btn-whatsapp{
+    border: 2px solid #00c1d4;
+    background-color: transparent;
+    color: white;
+    border-radius: 10px;
+    width: 100px;
+    height: 35px;
+    font-family: var(--fonte-destaque);
+    cursor: pointer;
+    display: block;
+    margin: 0px;
+
+  }
+
+  .btn-whatsapp:hover{
+    background-color: #00c1d4;
+    transition-duration: 1s;
   }
   
   /* Seções principais */
@@ -707,26 +733,237 @@
 }
 
 
-.advogado{
-  width: 100%;
-  height: 500px;
- 
-}
 
-.box-advogado{
-  width: 350px;
-  height: 350px;
-  background-color: #00c1d4;
-}
-
-
-
-.blog{
+.cv-advogado{
   background-color: #1D3541;
   width: 100%;
-  height: 500px;
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
 
+
+.lawyer-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+}
+
+.lawyer-container ul{
+  list-style-type: none;
+}
+
+.lawyer-container li{
+  margin-bottom: 25px;
+}
+
+.lawyer-photo img {
+  width: 60%;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lawyer-photo img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.lawyer-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.lawyer-details h2 {
+  font-size: 2rem;
+
+  margin-bottom: 5px;
+}
+
+.lawyer-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+ 
+  margin-bottom: 10px;
+}
+
+.lawyer-experience {
+  font-size: 1rem;
+  line-height: 1.6;
+
+}
+
+.contact-button {
+  align-self: start;
+  background: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin: 0px;
+}
+
+.contact-button:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+.citacao{
+  font-size: 1.5em;
+  font-style: italic;
+  margin: 30px 0px 0px 0px;
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .lawyer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .lawyer-photo img {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .contact-button {
+    align-self: center;
+  }
+}
+
+/* Estilo geral do mini-blog */
+.mini-blog {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.mini-blog h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #333;
+}
+
+/* Container das notícias */
+.blog-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .blog-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Estilo individual das notícias */
+.blog-item {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  background: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.blog-item:hover {
+  transform: translateY(-5px);
+}
+
+.blog-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.blog-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.blog-item p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.blog-item button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.blog-item button:hover {
+  background: #007bff;
+}
+
+/* Paginação */
+.blog-pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.blog-pagination button {
+  padding: 5px 10px;
+  background: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.blog-pagination button:hover {
+  background: #007bff;
+}
+
+/* Modal */
+.news-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 90%;
+  max-width: 600px;
+}
+
+.close-modal {
+  font-size: 1.5rem;
+  color: #333;
+  cursor: pointer;
+  float: right;
+}
 
 
 
