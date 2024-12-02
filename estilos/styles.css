@@ -961,6 +961,7 @@
 }
 
 .close-modal {
+  margin-top: 70px;
   font-size: 1.5rem;
   color: #333;
   cursor: pointer;
