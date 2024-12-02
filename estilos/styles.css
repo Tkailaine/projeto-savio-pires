@@ -480,6 +480,7 @@
 .area-card h3 {
   font-size: 1.25rem;
   margin-bottom: 10px;
+  color: white;
 }
 
 .area-card p {
@@ -842,7 +843,7 @@
 
 /* Estilo geral do mini-blog */
 .mini-blog {
-  padding: 20px;
+  padding: 50px 20px;
   max-width: 1000px;
   margin: 0 auto;
   font-family: Arial, sans-serif;
@@ -966,4 +967,163 @@
 }
 
 
+/* Defina o estado inicial dos elementos */
+.surge-bottom {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
 
+/* Estado final ao entrar na visualização */
+.surge-bottom.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.surge-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.surge-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+.surge-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 1s ease, transform 0.8s ease;
+}
+
+.surge-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.surge-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.surge-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+footer{
+  background-color: rgb(246, 246, 247);
+  padding: 40px 0px;
+  font-family: var(--fonte-destaque);
+}
+
+.sessao-footer{
+  display: flex;
+  margin-left: 5%;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 90%;
+    
+}
+
+.sessao-footer div{
+  margin-bottom: 15px;
+}
+
+footer ul, a{
+  list-style-type: none;
+  text-decoration: none;
+  color: var(--cor5);
+  font-weight: 500;
+}
+.endereco{
+  font-size: 1em;
+  margin-left: 20px;
+
+}
+
+h3{
+  color: var(--cor3);
+}
+
+.links-uteis > li > a:hover{
+  color: #00c1d4;
+}
+
+.nav-footer{
+  margin: 15px 0px;
+}
+
+.form {
+  width: 300px;
+  font-size: 1.125rem;
+}
+
+.form label,
+.form input,
+.form textarea,
+.form button {
+  display: block;
+  width: 100%;
+}
+
+.form label {
+  color: var(--cor5);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.form input,
+.form textarea {
+  font: inherit;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  transition: border-color, box-shadow 0.2s;
+}
+
+.form textarea {
+  min-height: 7rem;
+  resize: vertical;
+}
+
+.form input:hover,
+.form input:focus,
+.form textarea:hover,
+.form textarea:focus {
+  outline: none;
+  border-color: #00c1d4;
+  box-shadow: 0 0 0 2px #00c1d4 ;
+}
+
+.form button {
+  display: block;
+  padding: 1rem;
+  background: var(--cor3);
+  color: #fff;
+  font: inherit;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.form button:hover,
+.form button:focus {
+  outline: none;
+  background: var(--cor5);
+}
+
+.divisoria{
+    display: block;
+    width: 90%;
+    height: 1px;
+    background-color: #000000;
+    margin: 10px auto;
+}
